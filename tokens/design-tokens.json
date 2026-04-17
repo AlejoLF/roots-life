@@ -1,0 +1,515 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "name": "ROOTS LIFE Design Tokens",
+    "version": "1.0.0",
+    "description": "Tokens de diseño para la web de ROOTS LIFE. Formato W3C Design Tokens Community Group.",
+    "updatedAt": "2026-04-15",
+    "source": [
+      "DESIGN-SYSTEM-COLORS.md",
+      "DESIGN-SYSTEM-TYPOGRAPHY.md",
+      "DESIGN-SYSTEM-SPACING.md"
+    ]
+  },
+
+  "color": {
+    "$description": "Capa 1: tokens primitivos (raw palette). No usar directamente en componentes — siempre pasar por aliases.",
+
+    "ink": {
+      "$description": "Negro cálido — columna vertebral oscura. Nunca #000 puro.",
+      "50":  { "$value": "#F5F4F1", "$type": "color" },
+      "100": { "$value": "#E8E6E0", "$type": "color" },
+      "200": { "$value": "#CFCCC3", "$type": "color" },
+      "300": { "$value": "#A8A49A", "$type": "color" },
+      "400": { "$value": "#706C63", "$type": "color" },
+      "500": { "$value": "#4A4740", "$type": "color" },
+      "600": { "$value": "#2E2C28", "$type": "color" },
+      "700": { "$value": "#1A1917", "$type": "color" },
+      "800": { "$value": "#121110", "$type": "color" },
+      "900": { "$value": "#0E0E0E", "$type": "color" },
+      "950": { "$value": "#050505", "$type": "color" }
+    },
+
+    "paper": {
+      "$description": "Crema cálida — fondo base editorial.",
+      "50":  { "$value": "#FDFBF6", "$type": "color" },
+      "100": { "$value": "#F7F3EA", "$type": "color" },
+      "200": { "$value": "#EFE8D9", "$type": "color" },
+      "300": { "$value": "#E3DBC8", "$type": "color" },
+      "400": { "$value": "#CFC5AE", "$type": "color" }
+    },
+
+    "rust": {
+      "$description": "Coral patagónico — acento cálido, CTA secundario.",
+      "50":  { "$value": "#FBEEE8", "$type": "color" },
+      "100": { "$value": "#F6D4C5", "$type": "color" },
+      "300": { "$value": "#E89274", "$type": "color" },
+      "500": { "$value": "#D85A3A", "$type": "color" },
+      "700": { "$value": "#A03E24", "$type": "color" },
+      "900": { "$value": "#5E2413", "$type": "color" }
+    },
+
+    "moss": {
+      "$description": "Verde profundo patagónico.",
+      "50":  { "$value": "#EEF0E8", "$type": "color" },
+      "100": { "$value": "#D2D8BF", "$type": "color" },
+      "300": { "$value": "#8B9770", "$type": "color" },
+      "500": { "$value": "#4E5A38", "$type": "color" },
+      "700": { "$value": "#323B23", "$type": "color" },
+      "900": { "$value": "#1B2012", "$type": "color" }
+    },
+
+    "tide": {
+      "$description": "Teal apagado — mar del sur.",
+      "50":  { "$value": "#E8F0F0", "$type": "color" },
+      "100": { "$value": "#C1D7D7", "$type": "color" },
+      "300": { "$value": "#6AA0A0", "$type": "color" },
+      "500": { "$value": "#3E8A8A", "$type": "color" },
+      "700": { "$value": "#27605E", "$type": "color" },
+      "900": { "$value": "#143432", "$type": "color" }
+    },
+
+    "earth": {
+      "$description": "Marrón chocolate — tierra, taller.",
+      "50":  { "$value": "#F2EBE3", "$type": "color" },
+      "100": { "$value": "#DBC5AD", "$type": "color" },
+      "300": { "$value": "#A67A54", "$type": "color" },
+      "500": { "$value": "#7A4A2A", "$type": "color" },
+      "700": { "$value": "#50301A", "$type": "color" },
+      "900": { "$value": "#2A1A0E", "$type": "color" }
+    },
+
+    "capsule": {
+      "$description": "Acentos de cápsula. Solo se usan en páginas de colección específica, nunca en navegación general.",
+      "lime":  { "$value": "#8BA548", "$type": "color", "$description": "Cápsula 33.33 — ritual / serpiente" },
+      "cyan":  { "$value": "#2FB8D4", "$type": "color", "$description": "Cápsula 55 55 — transformación" },
+      "sky":   { "$value": "#9CB7D4", "$type": "color", "$description": "Línea Kobe — calma" },
+      "rose":  { "$value": "#B07870", "$type": "color", "$description": "Línea Locals — cercanía" }
+    },
+
+    "status": {
+      "$description": "Colores funcionales para feedback de sistema. No decorativos.",
+      "success": {
+        "bg": { "$value": "#E6F2EA", "$type": "color" },
+        "fg": { "$value": "#2B6B3E", "$type": "color" }
+      },
+      "warning": {
+        "bg": { "$value": "#FBF1E0", "$type": "color" },
+        "fg": { "$value": "#8A5A16", "$type": "color" }
+      },
+      "error": {
+        "bg": { "$value": "#FBE7E4", "$type": "color" },
+        "fg": { "$value": "#B53022", "$type": "color" }
+      },
+      "info": {
+        "bg": { "$value": "#E8EEF6", "$type": "color" },
+        "fg": { "$value": "#2B4F86", "$type": "color" }
+      }
+    }
+  },
+
+  "semantic": {
+    "$description": "Capa 2: alias semánticos. Lo que el código debería consumir.",
+
+    "bg": {
+      "default":  { "$value": "{color.paper.100}", "$type": "color", "$description": "Fondo default del sitio" },
+      "elevated": { "$value": "{color.paper.50}",  "$type": "color", "$description": "Modales, cards elevadas" },
+      "alt":      { "$value": "{color.paper.200}", "$type": "color", "$description": "Fondo alternativo" },
+      "inverse":  { "$value": "{color.ink.900}",   "$type": "color", "$description": "Hero editorial oscuro, footer" }
+    },
+
+    "text": {
+      "default": { "$value": "{color.ink.900}",   "$type": "color" },
+      "muted":   { "$value": "{color.ink.500}",   "$type": "color", "$description": "Texto secundario" },
+      "subtle":  { "$value": "{color.ink.400}",   "$type": "color", "$description": "Captions, metadata" },
+      "inverse": { "$value": "{color.paper.100}", "$type": "color", "$description": "Texto sobre inverse bg" }
+    },
+
+    "border": {
+      "default": { "$value": "{color.ink.100}", "$type": "color" },
+      "strong":  { "$value": "{color.ink.200}", "$type": "color" },
+      "inverse": { "$value": "{color.ink.700}", "$type": "color" }
+    },
+
+    "action": {
+      "primary": {
+        "bg":       { "$value": "{color.ink.900}",   "$type": "color" },
+        "bgHover":  { "$value": "{color.ink.800}",   "$type": "color" },
+        "fg":       { "$value": "{color.paper.100}", "$type": "color" }
+      },
+      "accent": {
+        "bg":       { "$value": "{color.rust.500}",  "$type": "color" },
+        "bgHover":  { "$value": "{color.rust.700}",  "$type": "color" },
+        "fg":       { "$value": "{color.paper.100}", "$type": "color" }
+      }
+    },
+
+    "focus": {
+      "ring": { "$value": "{color.rust.500}", "$type": "color" }
+    }
+  },
+
+  "fontFamily": {
+    "display": {
+      "$value": ["Kobe", "Poppins", "Helvetica Neue", "Arial", "sans-serif"],
+      "$type": "fontFamily",
+      "$description": "Kobe — voz de marca. Uppercase siempre en display/H1/H2."
+    },
+    "body": {
+      "$value": ["Poppins", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+      "$type": "fontFamily",
+      "$description": "Poppins — UI, body, H3-H6."
+    }
+  },
+
+  "fontWeight": {
+    "regular":   { "$value": 400, "$type": "fontWeight" },
+    "medium":    { "$value": 500, "$type": "fontWeight" },
+    "bold":      { "$value": 700, "$type": "fontWeight", "$description": "Kobe bold" },
+    "extrabold": { "$value": 800, "$type": "fontWeight", "$description": "Poppins extrabold" }
+  },
+
+  "fontSize": {
+    "$description": "Escala modular 1.25 (Major Third). Base 16px.",
+    "xs":   { "$value": "0.75rem",  "$type": "dimension", "$description": "12px" },
+    "sm":   { "$value": "0.875rem", "$type": "dimension", "$description": "14px" },
+    "base": { "$value": "1rem",     "$type": "dimension", "$description": "16px — mínimo legible" },
+    "md":   { "$value": "1.125rem", "$type": "dimension", "$description": "18px" },
+    "lg":   { "$value": "1.25rem",  "$type": "dimension", "$description": "20px" },
+    "xl":   { "$value": "1.5rem",   "$type": "dimension", "$description": "24px" },
+    "2xl":  { "$value": "1.875rem", "$type": "dimension", "$description": "30px" },
+    "3xl":  { "$value": "2.375rem", "$type": "dimension", "$description": "38px" },
+    "4xl":  { "$value": "3rem",     "$type": "dimension", "$description": "48px" },
+    "5xl":  { "$value": "3.75rem",  "$type": "dimension", "$description": "60px" },
+    "6xl":  { "$value": "4.75rem",  "$type": "dimension", "$description": "76px" },
+    "7xl":  { "$value": "6rem",     "$type": "dimension", "$description": "96px" }
+  },
+
+  "lineHeight": {
+    "none":    { "$value": 1,    "$type": "number" },
+    "tight":   { "$value": 1.1,  "$type": "number" },
+    "snug":    { "$value": 1.2,  "$type": "number" },
+    "normal":  { "$value": 1.4,  "$type": "number" },
+    "relaxed": { "$value": 1.6,  "$type": "number" }
+  },
+
+  "letterSpacing": {
+    "tighter": { "$value": "-0.02em", "$type": "dimension" },
+    "tight":   { "$value": "-0.01em", "$type": "dimension" },
+    "normal":  { "$value": "0",       "$type": "dimension" },
+    "wide":    { "$value": "0.04em",  "$type": "dimension" },
+    "wider":   { "$value": "0.06em",  "$type": "dimension" },
+    "widest":  { "$value": "0.1em",   "$type": "dimension" }
+  },
+
+  "textStyle": {
+    "$description": "Capa 3: composite tokens — estilos de texto listos para aplicar.",
+
+    "displayHero": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.display}",
+        "fontSize":      "{fontSize.6xl}",
+        "fontWeight":    "{fontWeight.bold}",
+        "lineHeight":    "{lineHeight.none}",
+        "letterSpacing": "{letterSpacing.tighter}",
+        "textTransform": "uppercase"
+      }
+    },
+    "displayXL": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.display}",
+        "fontSize":      "{fontSize.5xl}",
+        "fontWeight":    "{fontWeight.bold}",
+        "lineHeight":    "{lineHeight.tight}",
+        "letterSpacing": "{letterSpacing.tight}",
+        "textTransform": "uppercase"
+      }
+    },
+    "h1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.display}",
+        "fontSize":      "{fontSize.4xl}",
+        "fontWeight":    "{fontWeight.bold}",
+        "lineHeight":    "{lineHeight.tight}",
+        "letterSpacing": "{letterSpacing.tight}",
+        "textTransform": "uppercase"
+      }
+    },
+    "h2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.display}",
+        "fontSize":      "{fontSize.3xl}",
+        "fontWeight":    "{fontWeight.bold}",
+        "lineHeight":    "{lineHeight.tight}",
+        "letterSpacing": "{letterSpacing.tight}",
+        "textTransform": "uppercase"
+      }
+    },
+    "h3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.2xl}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.snug}",
+        "letterSpacing": "{letterSpacing.tight}",
+        "textTransform": "none"
+      }
+    },
+    "h4": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.xl}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.snug}",
+        "letterSpacing": "{letterSpacing.normal}",
+        "textTransform": "none"
+      }
+    },
+    "h5": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.lg}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.snug}",
+        "letterSpacing": "{letterSpacing.normal}",
+        "textTransform": "none"
+      }
+    },
+    "h6": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.base}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.normal}",
+        "letterSpacing": "{letterSpacing.wide}",
+        "textTransform": "uppercase"
+      }
+    },
+    "bodyLg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.md}",
+        "fontWeight":    "{fontWeight.regular}",
+        "lineHeight":    "{lineHeight.relaxed}",
+        "letterSpacing": "{letterSpacing.normal}"
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.base}",
+        "fontWeight":    "{fontWeight.regular}",
+        "lineHeight":    "{lineHeight.relaxed}",
+        "letterSpacing": "{letterSpacing.normal}"
+      }
+    },
+    "bodySm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.sm}",
+        "fontWeight":    "{fontWeight.regular}",
+        "lineHeight":    "{lineHeight.normal}",
+        "letterSpacing": "{letterSpacing.normal}"
+      }
+    },
+    "buttonLg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.base}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.tight}",
+        "letterSpacing": "{letterSpacing.wide}",
+        "textTransform": "uppercase"
+      }
+    },
+    "button": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.sm}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.tight}",
+        "letterSpacing": "{letterSpacing.wide}",
+        "textTransform": "uppercase"
+      }
+    },
+    "navLink": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.sm}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.tight}",
+        "letterSpacing": "{letterSpacing.wider}",
+        "textTransform": "uppercase"
+      }
+    },
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.sm}",
+        "fontWeight":    "{fontWeight.medium}",
+        "lineHeight":    "{lineHeight.normal}",
+        "letterSpacing": "{letterSpacing.normal}"
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.xs}",
+        "fontWeight":    "{fontWeight.medium}",
+        "lineHeight":    "{lineHeight.normal}",
+        "letterSpacing": "{letterSpacing.wide}",
+        "textTransform": "uppercase"
+      }
+    },
+    "stamp": {
+      "$type": "typography",
+      "$description": "Sello de coordenadas — CHUBUT · PATAGONIA · ESTD 2024",
+      "$value": {
+        "fontFamily":    "{fontFamily.body}",
+        "fontSize":      "{fontSize.xs}",
+        "fontWeight":    "{fontWeight.extrabold}",
+        "lineHeight":    "{lineHeight.none}",
+        "letterSpacing": "{letterSpacing.widest}",
+        "textTransform": "uppercase"
+      }
+    }
+  },
+
+  "space": {
+    "$description": "Escala base 4px.",
+    "0":    { "$value": "0",        "$type": "dimension" },
+    "px":   { "$value": "1px",      "$type": "dimension" },
+    "0-5":  { "$value": "0.125rem", "$type": "dimension" },
+    "1":    { "$value": "0.25rem",  "$type": "dimension" },
+    "2":    { "$value": "0.5rem",   "$type": "dimension" },
+    "3":    { "$value": "0.75rem",  "$type": "dimension" },
+    "4":    { "$value": "1rem",     "$type": "dimension" },
+    "5":    { "$value": "1.25rem",  "$type": "dimension" },
+    "6":    { "$value": "1.5rem",   "$type": "dimension" },
+    "8":    { "$value": "2rem",     "$type": "dimension" },
+    "10":   { "$value": "2.5rem",   "$type": "dimension" },
+    "12":   { "$value": "3rem",     "$type": "dimension" },
+    "16":   { "$value": "4rem",     "$type": "dimension" },
+    "20":   { "$value": "5rem",     "$type": "dimension" },
+    "24":   { "$value": "6rem",     "$type": "dimension" },
+    "32":   { "$value": "8rem",     "$type": "dimension" },
+    "40":   { "$value": "10rem",    "$type": "dimension" },
+    "48":   { "$value": "12rem",    "$type": "dimension" }
+  },
+
+  "inset": {
+    "xs":  { "$value": "{space.2}",  "$type": "dimension" },
+    "sm":  { "$value": "{space.3}",  "$type": "dimension" },
+    "md":  { "$value": "{space.4}",  "$type": "dimension" },
+    "lg":  { "$value": "{space.6}",  "$type": "dimension" },
+    "xl":  { "$value": "{space.8}",  "$type": "dimension" },
+    "2xl": { "$value": "{space.12}", "$type": "dimension" }
+  },
+
+  "stack": {
+    "xs":  { "$value": "{space.1}",  "$type": "dimension" },
+    "sm":  { "$value": "{space.2}",  "$type": "dimension" },
+    "md":  { "$value": "{space.4}",  "$type": "dimension" },
+    "lg":  { "$value": "{space.6}",  "$type": "dimension" },
+    "xl":  { "$value": "{space.10}", "$type": "dimension" },
+    "2xl": { "$value": "{space.16}", "$type": "dimension" },
+    "3xl": { "$value": "{space.24}", "$type": "dimension" }
+  },
+
+  "inline": {
+    "xs": { "$value": "{space.1}", "$type": "dimension" },
+    "sm": { "$value": "{space.2}", "$type": "dimension" },
+    "md": { "$value": "{space.4}", "$type": "dimension" },
+    "lg": { "$value": "{space.6}", "$type": "dimension" }
+  },
+
+  "gap": {
+    "tight": { "$value": "{space.2}",  "$type": "dimension" },
+    "sm":    { "$value": "{space.4}",  "$type": "dimension" },
+    "md":    { "$value": "{space.6}",  "$type": "dimension" },
+    "lg":    { "$value": "{space.8}",  "$type": "dimension" },
+    "xl":    { "$value": "{space.12}", "$type": "dimension" }
+  },
+
+  "container": {
+    "proseNarrow": { "$value": "32rem", "$type": "dimension", "$description": "512px — columna editorial angosta" },
+    "prose":       { "$value": "42rem", "$type": "dimension", "$description": "672px — body largo ~65ch" },
+    "md":          { "$value": "60rem", "$type": "dimension", "$description": "960px" },
+    "lg":          { "$value": "75rem", "$type": "dimension", "$description": "1200px — default del sitio" },
+    "xl":          { "$value": "90rem", "$type": "dimension", "$description": "1440px" }
+  },
+
+  "breakpoint": {
+    "sm":  { "$value": "40em", "$type": "dimension", "$description": "640px" },
+    "md":  { "$value": "48em", "$type": "dimension", "$description": "768px" },
+    "lg":  { "$value": "64em", "$type": "dimension", "$description": "1024px" },
+    "xl":  { "$value": "80em", "$type": "dimension", "$description": "1280px" },
+    "2xl": { "$value": "90em", "$type": "dimension", "$description": "1440px" }
+  },
+
+  "radius": {
+    "$description": "Border radius — estética editorial plana, radios contenidos.",
+    "none": { "$value": "0",       "$type": "dimension" },
+    "xs":   { "$value": "2px",     "$type": "dimension" },
+    "sm":   { "$value": "4px",     "$type": "dimension" },
+    "md":   { "$value": "8px",     "$type": "dimension" },
+    "lg":   { "$value": "16px",    "$type": "dimension" },
+    "full": { "$value": "9999px",  "$type": "dimension", "$description": "Pills, badges, avatares" }
+  },
+
+  "borderWidth": {
+    "0":  { "$value": "0",   "$type": "dimension" },
+    "1":  { "$value": "1px", "$type": "dimension" },
+    "2":  { "$value": "2px", "$type": "dimension" },
+    "4":  { "$value": "4px", "$type": "dimension" }
+  },
+
+  "elevation": {
+    "$description": "Estética flat — sombras sutiles solo para elementos flotantes.",
+    "none": { "$value": "none", "$type": "shadow" },
+    "sm":   { "$value": "0 1px 2px 0 rgba(14, 14, 14, 0.06)",   "$type": "shadow" },
+    "md":   { "$value": "0 2px 8px 0 rgba(14, 14, 14, 0.08)",   "$type": "shadow" },
+    "lg":   { "$value": "0 8px 24px 0 rgba(14, 14, 14, 0.12)",  "$type": "shadow" },
+    "xl":   { "$value": "0 16px 48px 0 rgba(14, 14, 14, 0.16)", "$type": "shadow" }
+  },
+
+  "motion": {
+    "duration": {
+      "instant":  { "$value": "0ms",   "$type": "duration" },
+      "fast":     { "$value": "120ms", "$type": "duration" },
+      "normal":   { "$value": "200ms", "$type": "duration" },
+      "slow":     { "$value": "320ms", "$type": "duration" },
+      "slower":   { "$value": "500ms", "$type": "duration" }
+    },
+    "easing": {
+      "standard":   { "$value": "cubic-bezier(0.4, 0, 0.2, 1)", "$type": "cubicBezier" },
+      "decelerate": { "$value": "cubic-bezier(0, 0, 0.2, 1)",   "$type": "cubicBezier" },
+      "accelerate": { "$value": "cubic-bezier(0.4, 0, 1, 1)",   "$type": "cubicBezier" }
+    }
+  },
+
+  "zIndex": {
+    "base":     { "$value": 0,    "$type": "number" },
+    "dropdown": { "$value": 100,  "$type": "number" },
+    "sticky":   { "$value": 200,  "$type": "number" },
+    "overlay":  { "$value": 800,  "$type": "number" },
+    "modal":    { "$value": 900,  "$type": "number" },
+    "toast":    { "$value": 1000, "$type": "number" }
+  }
+}

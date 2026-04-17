@@ -1,0 +1,14 @@
+# PSD / archivos pesados de edición
+*.psd
+*.ai
+*.indd
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*.swo
