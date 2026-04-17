@@ -389,6 +389,39 @@
       justify-content: center;
     }
     @media (min-width: 64em) { .closing { padding: var(--space-16) var(--space-8); } }
+
+    /* Mobile refinements — historia ===================================== */
+    @media (max-width: 47.99em) {
+      /* Hero: título más contenido */
+      .hero__title { font-size: clamp(1.5rem, 4vw + 0.8rem, var(--text-4xl)); }
+      .hero { min-height: 60vh; padding: var(--space-8) var(--space-4); }
+
+      /* Manifesto: body text más cómodo */
+      .manifesto { padding: var(--space-10) var(--space-4); }
+      .manifesto__lead { font-size: clamp(1.1rem, 2vw + 0.5rem, var(--text-xl)); }
+      .manifesto__body { font-size: 15px; line-height: 1.75; }
+
+      /* Quote: tamaño más moderado para wrapping natural */
+      .quote__text { font-size: clamp(0.95rem, 3.2vw, 1.25rem); }
+      .quote { min-height: 40vh; padding: var(--space-10) var(--space-4); }
+
+      /* Symbols: padding reducido */
+      .symbols { padding: var(--space-10) var(--space-4); }
+
+      /* Philosophy: quote más chica, principles en 1 columna */
+      .philosophy__quote { font-size: clamp(1.1rem, 2.2vw + 0.6rem, var(--text-xl)); }
+      .philosophy__principles { grid-template-columns: 1fr; }
+      .principle { font-size: 11px; padding: var(--space-3); }
+      .philosophy { padding: var(--space-10) var(--space-4); }
+
+      /* Backstage: rows más altas para que se vean mejor */
+      .backstage { padding: var(--space-10) var(--space-4); }
+      .backstage__grid { grid-auto-rows: 180px; }
+
+      /* Closing */
+      .closing { padding: var(--space-10) var(--space-4); }
+      .closing__tag { font-size: clamp(1.25rem, 3vw + 0.5rem, var(--text-3xl)); }
+    }
   </style>
 </head>
 <body>

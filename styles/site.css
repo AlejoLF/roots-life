@@ -628,6 +628,37 @@ body[data-page="home"] .site-header:not(.is-scrolled) .site-header__logo {
   .mobile-overlay, .mobile-drawer { display: none; }
 }
 
+/* =====================================================================
+   Mobile refinements (shared — ≤ 47.99em)
+   ===================================================================== */
+@media (max-width: 47.99em) {
+  /* Buttons: reducir padding en mobile */
+  .btn {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-xs);
+  }
+  .btn--ghost-inverse {
+    padding: calc(var(--space-3) - 2px) calc(var(--space-4) - 2px);
+  }
+  .btn--outline {
+    padding: calc(var(--space-3) - 1.5px) calc(var(--space-4) - 1.5px);
+  }
+
+  /* Product cards: caption legible, title con ellipsis */
+  .product-card__caption { font-size: 11px; }
+  .product-card__media { margin-bottom: var(--space-2); }
+
+  /* Sections: reducir padding vertical */
+  .section { padding: var(--space-10) 0; }
+
+  /* Footer: padding más moderado */
+  .site-footer { padding-top: var(--space-10); padding-bottom: var(--space-10); }
+  .site-footer__inner { gap: var(--space-6); }
+
+  /* Mobile drawer nav: tipografía más contenida */
+  .mobile-drawer__nav a { font-size: var(--text-lg); padding: var(--space-3) var(--space-5); }
+}
+
 /* Reduced motion ------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

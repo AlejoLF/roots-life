@@ -444,6 +444,21 @@
       color: var(--ink-900);
     }
     .close-btn:hover { background: var(--ink-100); }
+
+    /* Mobile refinements — catálogo ===================================== */
+    @media (max-width: 47.99em) {
+      /* Tabs: padding más compacto */
+      .tab { padding: var(--space-1) var(--space-3); font-size: 11px; }
+
+      /* Capsule groups: título más contenido, desc con más aire */
+      .capsule-group__title { font-size: clamp(1.3rem, 3vw + 0.5rem, 2.25rem); }
+      .capsule-group__desc { margin-top: var(--space-2); line-height: 1.7; }
+      .capsule-group__head { margin-bottom: var(--space-5); }
+      .capsule-group + .capsule-group { margin-top: var(--space-10); padding-top: var(--space-8); }
+
+      /* Grid: gap más compacto */
+      .catalog__grid { gap: var(--space-4); }
+    }
   </style>
 </head>
 <body>

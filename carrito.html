@@ -365,6 +365,15 @@
       gap: var(--gap-md);
     }
     @media (min-width: 64em) { .related__grid { grid-template-columns: repeat(4, 1fr); gap: var(--gap-lg); } }
+
+    /* Mobile refinements — carrito ======================================= */
+    @media (max-width: 47.99em) {
+      .cart-item__caption { font-size: 11px; }
+      .cart-item__title a { font-size: var(--text-base); }
+      .cart-summary { padding: var(--space-4); gap: var(--space-3); }
+      .promo input, .promo button { height: 44px; }
+      .related__grid { gap: var(--space-4); }
+    }
   </style>
 </head>
 <body>

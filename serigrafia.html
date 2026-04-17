@@ -296,6 +296,25 @@
       text-transform: uppercase;
       color: var(--paper-400);
     }
+
+    /* Mobile refinements — serigrafía =================================== */
+    @media (max-width: 47.99em) {
+      /* Steps: más compactos */
+      .step { padding: var(--space-4); }
+      .step__num { font-size: var(--text-2xl); margin-bottom: var(--stack-sm); }
+      .step__title { font-size: 15px; }
+      .step__desc { font-size: 13px; line-height: 1.65; }
+
+      /* Taller: body text más cómodo, specs en 1 columna */
+      .taller__body p { font-size: 15px; line-height: 1.7; }
+      .taller__specs { grid-template-columns: 1fr; gap: var(--space-3); }
+      .taller__specs li { font-size: 13px; }
+      .taller__specs li strong { font-size: 9px; }
+      .taller { padding: var(--space-10) var(--space-4); }
+
+      /* CTA strip */
+      .cta-strip { padding: var(--space-8) var(--space-4); }
+    }
   </style>
 </head>
 <body>

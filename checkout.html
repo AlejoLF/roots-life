@@ -445,6 +445,18 @@
       font-weight: var(--fw-medium);
       border-bottom: 1px solid currentColor;
     }
+
+    /* Mobile refinements — checkout ====================================== */
+    @media (max-width: 47.99em) {
+      .field label { font-size: 11px; }
+      .field input, .field select, .field textarea { height: 48px; font-size: 16px; }
+      .radio-card { padding: var(--space-3); gap: var(--space-2); }
+      .radio-card input[type="radio"] { width: 20px; height: 20px; min-width: 20px; }
+      .steps { gap: var(--space-1); font-size: 9px; }
+      .steps__num { width: 20px; height: 20px; font-size: 9px; }
+      .steps__sep { width: 16px; }
+      .submit-row .btn { padding-inline: var(--space-4); }
+    }
   </style>
 </head>
 <body data-page="checkout">
