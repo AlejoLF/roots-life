@@ -37,7 +37,6 @@
 
       <nav class="mobile-drawer__nav" aria-label="Navegación principal">
         <a href="./catalogo.html" ${current('catalogo.html')}>Shop</a>
-        <a href="./catalogo.html?capsula=numerologia">Cápsulas</a>
         <a href="./historia.html" ${current('historia.html')}>Historia</a>
         <a href="./serigrafia.html" ${current('serigrafia.html')}>Serigrafía</a>
       </nav>

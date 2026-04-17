@@ -1,0 +1,21 @@
+# Archivos de edición pesados
+*.psd
+*.ai
+*.indd
+
+# Archivos de diseño/docs (no necesarios para la web)
+BRIEF-ROOTS-LIFE.md
+DESIGN-SYSTEM-*.md
+screens/
+tokens/README.md
+tokens/design-tokens.json
+tokens/tailwind.preset.js
+
+# Logos sueltos (la web usa logos/logos.svg)
+ROOTS LIFE - Logo - full.svg
+ROOTS LIFE - Logo - horizontal small.svg
+ROOTS LIFE - Logo - small aplications.svg
+Roots life LOGO 2.0_Mesa de trabajo 1 copia 3.png
+
+# Git
+.git/
